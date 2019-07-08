@@ -25,16 +25,22 @@ export default {
       default: "No"
     }
   },
+  data() {
+    return {
+      model: this.value
+    };
+  },
   methods: {
     onClick: function(button, value) {},
     reRender(button, value) {
       this.$refs.forEach(element => {
         element.className = "";
       });
-      this.value = value;
+      this.model = value;
       if (button) {
         this.$refs[button].className = ".checkbox-button__selected";
       }
+      this.$emit("input", this.model);
     }
   },
   mounted() {
