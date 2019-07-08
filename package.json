@@ -41,7 +41,15 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "linebreak-style": 0,
+      "import/extensions": [
+        "js",
+        "jsx",
+        "json",
+        "vue"
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
